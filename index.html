@@ -116,7 +116,7 @@ button:hover{
 
 <button onclick="showCalendar()">📆 今月の予定</button>
 
-<button>👨‍🏫 レッスン</button>
+<button> onclick="showLesson()">👨‍🏫 レッスン</button>
 
 <button>💼 仕事</button>
 
@@ -200,7 +200,13 @@ function showCalendar(){
 
 }
 
-function backHome(){
+function showLesson(){
+
+  document.getElementById("lessonPage").style.display="block";
+
+  document.querySelector(".menu").style.display="none";
+
+}function backHome(){
 
   document.getElementById("calendarPage").style.display="none";
 
@@ -209,6 +215,56 @@ function backHome(){
 }
 
 </script>
+
+<div id="lessonPage" style="display:none;">
+
+<h2>👨‍🏫 レッスン</h2>
+
+<table border="1" width="100%">
+
+<tr>
+
+<th>日付</th>
+
+<th>時間</th>
+
+<th>生徒</th>
+
+<th>内容</th>
+
+</tr>
+
+<tr>
+
+<td>7/21</td>
+
+<td>17:00</td>
+
+<td>〇〇さん</td>
+
+<td>英語</td>
+
+</tr>
+
+<tr>
+
+<td>7/22</td>
+
+<td>18:30</td>
+
+<td>〇〇さん</td>
+
+<td>英語</td>
+
+</tr>
+
+</table>
+
+<br>
+
+<button onclick="backHome()">← 戻る</button>
+
+</div>
 
 </body>
 
